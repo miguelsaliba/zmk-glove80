@@ -180,12 +180,12 @@
 
         mouse_layer {
             bindings = <
-&none  &none           &none           &none           &none                                                                                                                &none                &none                &none      &none      &none
-&none  &none           &none           &none           &none            &kp HOME                                                                                &none                &none                &none                &none      &none      &none
-&none  &none           &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &kp END                                                                                &none            &sk RSHFT            &sk RCTRL             &sk RALT   &sk RGUI      &none
-&none  &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PG_UP                                                                         &msc SCRL_UP  &mo LAYER_MouseFast  &mo LAYER_MouseWarp  &mo LAYER_MouseSlow  &mkp LCLK   &mkp MB4
-&none  &msc SCRL_DOWN  &none           &none           &none            &kp PG_DN  &mkp MCLK  &kp K_APP  &mkp MB5  &kp LC(X)  &kp LC(C)  &kp LC(LC(V))  &msc SCRL_DOWN       &msc SCRL_LEFT         &mmv MOVE_UP      &msc SCRL_RIGHT  &mkp RCLK   &mkp MB5
-&none  &none           &none           &none           &none                       &mkp LCLK  &mkp RCLK  &mkp MB4      &none      &none          &none                       &mmv MOVE_LEFT       &mmv MOVE_DOWN      &mmv MOVE_RIGHT  &mkp MCLK  &kp K_APP
+&none  &none           &none           &none           &none                                                                                                             &none                &none                &none                &none      &none
+&none  &none           &none           &none           &none            &kp HOME                                                                          &none          &none                &none                &none                &none      &none
+&none  &none           &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &kp END                                                                           &none          &sk RSHFT            &sk RCTRL            &sk RALT             &sk RGUI   &none
+&none  &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PG_UP                                                                         &msc SCRL_UP   &none                &none                &none                &mkp LCLK  &mkp MB4
+&none  &msc SCRL_DOWN  &none           &none           &none            &kp PG_DN  &mkp MCLK  &kp K_APP  &mkp MB5   &kp LC(X)  &kp LC(C)  &kp LC(LC(V))   &msc SCRL_DOWN &msc SCRL_LEFT       &mmv MOVE_UP         &msc SCRL_RIGHT      &mkp RCLK  &mkp MB5
+&none  &none           &none           &none           &none                       &mkp LCLK  &mkp RCLK  &mkp MB4   &none      &none      &none                          &mmv MOVE_LEFT       &mmv MOVE_DOWN       &mmv MOVE_RIGHT      &mkp MCLK  &kp K_APP
             >;
         };
 
