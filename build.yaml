@@ -18,3 +18,7 @@
 #     artifact-name: corne_left_with_studio
 #
 ---
+include:
+  - board: glove80_lh
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+  - board: glove80_rh
