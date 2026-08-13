@@ -32,14 +32,14 @@
 
 / {
     behaviors {
-        magic: magic {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAGIC_HOLD_TAP";
-            #binding-cells = <0>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo MAGIC>, <&rgb_ug_status_macro>;
-        };
+        /* magic: magic { */
+        /*     compatible = "zmk,behavior-hold-tap"; */
+        /*     label = "MAGIC_HOLD_TAP"; */
+        /*     #binding-cells = <0>; */
+        /*     flavor = "tap-preferred"; */
+        /*     tapping-term-ms = <200>; */
+        /*     bindings = <&mo MAGIC>, <&rgb_ug_status_macro>; */
+        /* }; */
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -65,13 +65,13 @@
     };
 
     macros {
-        rgb_ug_status_macro: rgb_ug_status_macro {
-            label = "RGB_UG_STATUS";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&rgb_ug RGB_STATUS>;
-        };
+        /* rgb_ug_status_macro: rgb_ug_status_macro { */
+        /*     label = "RGB_UG_STATUS"; */
+        /*     compatible = "zmk,behavior-macro"; */
+        /*     #binding-cells = <0>; */
+        /*     bindings */
+        /*         = <&rgb_ug RGB_STATUS>; */
+        /* }; */
 
         bt_sel: bt_profile_select {
             compatible = "zmk,behavior-macro-one-param";
@@ -79,7 +79,7 @@
             wait-ms = <0>;
             tap-ms = <0>;
             bindings
-                = <&out OUT_BLE>,
+                = <&out OUT_BLE>
                 , <&macro_param_1to1>
                 , <&bt BT_SEL MACRO_PLACEHOLDER>;
         };
@@ -129,7 +129,7 @@
 &kp TAB    &kp Q        &kp W        &kp E         &kp R         &kp T                                                                      &kp Y  &kp U         &kp I         &kp O        &kp P           &kp BSLH
 &kp ESC    &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G                                                                      &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
 &kp LSHFT  &kp Z        &kp X        &kp C         &kp V         &kp B   &none     &none    &none       &none       &none     &none         &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
-&magic     &none        &none        &none         &none                 &lt CURSOR BSPC  &lt NUMBER DEL  &mo SYSTEM  &caps_word  &lt SYMBOL RET   &lt MOUSE SPACE            &none         &none         &none        &none           &magic
+&mo MAGIC     &none        &none        &none         &none                 &lt CURSOR BSPC  &lt NUMBER DEL  &mo SYSTEM  &caps_word  &lt SYMBOL RET   &lt MOUSE SPACE            &none         &none         &none        &none           &mo MAGIC
             >;
         };
 
