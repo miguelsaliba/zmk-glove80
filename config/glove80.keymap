@@ -35,10 +35,10 @@
         magic: magic {
             compatible = "zmk,behavior-hold-tap";
             label = "MAGIC_HOLD_TAP";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo MAGIC>, <&rgb_ug_status_macro>;
+            bindings = <&mo>, <&rgb_ug_status_macro>;
         };
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
@@ -77,8 +77,7 @@
             label = "RGB_UG_STATUS";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&rgb_ug RGB_STATUS>;
+            bindings = <&rgb_ug RGB_STATUS>;
         };
 
         bt_sel: bt_profile_select {
@@ -137,18 +136,18 @@
 &kp TAB    &kp Q        &kp W        &kp E         &kp R         &kp T                                                                      &kp Y  &kp U         &kp I         &kp O        &kp P           &kp BSLH
 &kp ESC    &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G                                                                      &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
 &kp LSHFT  &kp Z        &kp X        &kp C         &kp V         &kp B   &none     &none    &none       &none       &none     &none         &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
-&magic     &none        &none        &none         &none                 &thumb CURSOR BSPC  &thumb NUMBER DEL  &mo SYSTEM  &caps_word  &thumb SYMBOL RET   &thumb MOUSE SPACE            &none         &none         &none        &none           &magic
+&magic MAGIC 0 &none    &none        &none         &none                 &thumb CURSOR BSPC  &thumb NUMBER DEL  &mo SYSTEM  &caps_word  &thumb SYMBOL RET   &thumb MOUSE SPACE            &none         &none         &none        &none           &magic MAGIC 0
             >;
         };
 
         number_layer {
             bindings = <
-&none   &none         &none         &none         &none                                                                                             &none   &none   &none    &none   &none
-&trans  &kp C_BRI_UP  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP      &none                                                                          &none   &none   &none   &none    &none   &none
-&trans  &kp C_BRI_DN  &kp C_PREV      &kp C_PP    &kp C_NEXT      &none                                                                &kp PLUS  &kp N7  &kp N8  &kp N9  &kp EQUAL   &none
-&trans  &kp LGUI      &kp LALT     &kp LCTRL     &kp LSHFT  &kp PSCRN                                                                      &kp MINUS  &kp N4  &kp N5  &kp N6  &kp MINUS   &none
-&trans  &kp K_APP     &none         &none         &none      &none                &trans  &trans   &none  &trans  &trans  &trans         &kp DOT  &kp N1  &kp N2  &kp N3  &kp DOT  &trans
-&trans  &none         &none         &none         &none             &none    &none  &none  &trans  &trans  &kp N0                    &none   &none   &none    &none  &trans
+&none   &none         &none         &none         &none                                                                      &none      &none   &none   &none   &none
+&trans  &kp C_BRI_UP  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP      &none                                                      &none      &none   &none   &none   &none      &none
+&trans  &kp C_BRI_DN  &kp C_PREV      &kp C_PP    &kp C_NEXT      &none                                                      &kp PLUS   &kp N7  &kp N8  &kp N9  &kp EQUAL  &none
+&trans  &kp LGUI      &kp LALT     &kp LCTRL     &kp LSHFT  &kp PSCRN                                                        &kp MINUS  &kp N4  &kp N5  &kp N6  &kp MINUS  &none
+&trans  &kp K_APP     &none         &none         &none      &none        &trans  &trans   &none  &trans  &trans  &trans     &kp N0     &kp N1  &kp N2  &kp N3  &kp DOT    &trans
+&trans  &none         &none         &none         &none                   &none    &none  &none  &trans  &trans  &trans                 &none   &none   &none   &none      &trans
             >;
         };
 
