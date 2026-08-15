@@ -125,59 +125,47 @@
 // |   `   |  Z  |  X  |  C   |  V   |  B   | LSHFT | LCTRL | LOWER | | LGUI  | RCTRL | RSHFT |  N   |   M   |   ,   |  .   |   /   | PGUP |
 // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
-ZMK_LAYER(base,
-&none      &none       &none       &none        &none                                                                                         &none         &none         &none        &none           &none
-&none      &none       &none       &none        &none        &none                                                                     &none  &none         &none         &none        &none           &none
-&kp TAB    &kp Q       &kp W       &kp E        &kp R        &kp T                                                                     &kp Y  &kp U         &kp I         &kp O        &kp P           &kp BSLH
-&kp ESC    &hml LGUI A &hml LALT S &hml LCTRL D &hml LSHFT F &kp G                                                                     &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
-&kp LSHFT  &kp Z       &kp X       &kp C        &kp V        &kp B  &none     &none    &none       &none       &none     &none         &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
-&magic MAGIC 0 &none   &none       &none        &none               &thumb NAV BSPC  &thumb NUM DEL  &mo SYS  &caps_word  &thumb SYM RET   &thumb MOUSE SPACE            &none         &none         &none        &none           &magic MAGIC 0
+ZMK_BASE_LAYER(base,
+&kp TAB    &kp Q       &kp W       &kp E        &kp R        &kp T    ,    &kp Y  &kp U         &kp I         &kp O        &kp P           &kp BSLH,
+&kp ESC    &hml LGUI A &hml LALT S &hml LCTRL D &hml LSHFT F &kp G    ,    &kp H  &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT,
+&kp LSHFT  &kp Z       &kp X       &kp C        &kp V        &kp B    ,    &kp N  &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT,
+                           &thumb NAV BSPC  &thumb NUM DEL  &mo SYS   ,    &caps_word  &thumb SYM RET   &thumb MOUSE SPACE
 )
 
-ZMK_LAYER(number,
-&none  &none        &none        &none         &none                                                                   &none      &none         &none         &none        &none
-&trans &none        &none        &none         &none         &none                                                     &none      &none         &none         &none        &none        &none
-&trans &kp LS(N1)   &kp LS(N2)   &kp LS(N3)    &kp LS(N4)    &kp LS(N5)                                                &kp LS(N6) &kp LS(N7)    &kp LS(N8)    &kp LS(N9)   &kp LS(N0)   &none
-&trans &hml LGUI N1 &hml LALT N2 &hml LCTRL N3 &hml LSHFT N4 &kp N5                                                    &kp N6     &hmr LSHFT N7 &hmr LCTRL N8 &hmr LALT N9 &hmr LGUI N0 &none
-&trans &kp K_APP    &none        &none         &none         &none      &trans  &trans  &none  &trans  &trans  &trans  &none      &none         &none         &trans       &trans       &trans
-&trans &none        &none        &none         &none                    &none   &none   &none  &trans  &trans  &trans             &none         &none         &none        &none        &trans
+ZMK_BASE_LAYER(number,
+&trans &kp LS(N1)   &kp LS(N2)   &kp LS(N3)    &kp LS(N4)    &kp LS(N5)  ,    &kp LS(N6) &kp LS(N7)    &kp LS(N8)    &kp LS(N9)   &kp LS(N0)   &none,
+&trans &hml LGUI N1 &hml LALT N2 &hml LCTRL N3 &hml LSHFT N4 &kp N5      ,    &kp N6     &hmr LSHFT N7 &hmr LCTRL N8 &hmr LALT N9 &hmr LGUI N0 &none,
+&trans &kp K_APP    &none        &none         &none         &none       ,    &none      &none         &none         &trans       &trans       &trans,
+                                                 &trans  &trans  &trans  ,    &trans  &trans  &trans
 )
 
-ZMK_LAYER(navigation,
-&none     &none     &none     &none     &none                                                                           &none        &none      &none      &none      &none
-&none     &none     &none     &none     &none     &none                                                      &none      &none        &none      &none      &none      &none
-&none     &kp LC(A) &kp SPACE &kp TAB   &kp BSPC  &kp LC(X)                                                  &kp LC(X)  &kp LS(TAB)  &kp LC(Z)  &kp LC(Y)  &kp TAB    &none
-&none     &kp LGUI  &kp LALT  &kp LCTRL &kp LSHFT &kp LC(C)                                                  &kp LEFT   &kp DOWN     &kp UP     &kp RIGHT  &kp LC(C)  &none
-&kp LC(L) &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(LS(V)) &trans &trans &trans   &trans &trans &trans  &kp LC(V)  &kp HOME     &kp PG_UP  &kp PG_DN  &kp END    &kp LC(L)
-&trans    &none     &none     &none     &none                   &none  &none  &none    &none  &none  &none              &none        &none      &none      &none      &trans
+ZMK_BASE_LAYER(navigation,
+&none     &kp LC(A) &kp SPACE &kp TAB   &kp BSPC  &kp LC(X)          ,     &kp LC(X)  &kp LS(TAB)  &kp LC(Z)  &kp LC(Y)  &kp TAB    &none,
+&none     &kp LGUI  &kp LALT  &kp LCTRL &kp LSHFT &kp LC(C)          ,     &kp LEFT   &kp DOWN     &kp UP     &kp RIGHT  &kp LC(C)  &none,
+&kp LC(L) &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(LS(V))      ,     &kp LC(V)  &kp HOME     &kp PG_UP  &kp PG_DN  &kp END    &kp LC(L),
+                                            &trans  &trans  &trans   ,   &trans  &trans  &trans
 )
 
-ZMK_LAYER(system,
-&none   &none        &none      &none        &none                                                                             &none  &none  &none  &none   &none
-&trans  &none        &none      &none        &none        &none                                                &none           &none  &none  &none  &none   &none
-&trans  &kp C_BRI_UP &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none                                                &kp PAUSE_BREAK &kp F7 &kp F8 &kp F9 &kp F10 &none
-&trans  &kp C_BRI_DN &kp C_PREV &kp C_PP     &kp C_NEXT   &kp PSCRN                                            &kp PSCRN       &kp F4 &kp F5 &kp F6 &kp F11 &none
-&trans  &kp LGUI     &kp LALT   &kp LCTRL    &kp LSHFT    &none     &none  &none  &none   &none  &none  &none  &kp SLCK        &kp F1 &kp F2 &kp F3 &kp F12 &trans
-&trans  &none        &none      &none        &none                  &trans &trans &trans  &trans &trans &trans                 &none  &none  &none  &none   &trans
+ZMK_BASE_LAYER(system,
+&trans  &kp C_BRI_UP &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none      ,   &kp PAUSE_BREAK &kp F7 &kp F8 &kp F9 &kp F10 &none,
+&trans  &kp C_BRI_DN &kp C_PREV &kp C_PP     &kp C_NEXT   &kp PSCRN  ,   &kp PSCRN       &kp F4 &kp F5 &kp F6 &kp F11 &none,
+&trans  &kp LGUI     &kp LALT   &kp LCTRL    &kp LSHFT    &none      ,   &kp SLCK        &kp F1 &kp F2 &kp F3 &kp F12 &trans,
+                                            &trans  &trans  &trans   ,   &trans  &trans  &trans
 )
 
-ZMK_LAYER(symbol,
-&none      &none     &none     &none     &none                                                                       &none     &none     &none     &none    &none
-&none      &kp COMMA &kp LPAR  &kp RPAR  &kp SEMI &kp DOT                                                  &none     &none     &none     &none     &none    &none
-&kp GRAVE  &kp LBKT  &kp LBRC  &kp RBRC  &kp RBKT &kp QMARK                                                &kp GRAVE &none     &none     &none     &none    &none
-&kp HASH   &kp CARET &kp EQUAL &kp UNDER &kp DLLR &kp BSLH                                                 &kp DQT   &kp RSHFT &kp RCTRL &kp RALT  &kp RGUI &none
-&kp TILDE  &kp LT    &kp PIPE  &kp MINUS &kp GT   &kp PLUS  &kp BSLH &kp DOT &kp STAR  &none &none &none   &kp SQT   &none     &none     &kp SPACE &none    &none
-&trans     &none     &none     &none     &none              &kp BSPC &kp DEL &kp AT    &none &none &none             &none     &none     &none     &none    &trans
+ZMK_BASE_LAYER(symbol,
+&kp GRAVE  &kp LBKT  &kp LBRC  &kp RBRC  &kp RBKT &kp QMARK      ,     &kp GRAVE &none     &none     &none     &none    &none,
+&kp HASH   &kp CARET &kp EQUAL &kp UNDER &kp DLLR &kp BSLH       ,     &kp DQT   &kp RSHFT &kp RCTRL &kp RALT  &kp RGUI &none,
+&kp TILDE  &kp LT    &kp PIPE  &kp MINUS &kp GT   &kp PLUS       ,     &kp SQT   &none     &none     &kp SPACE &none    &none,
+                                        &trans  &trans  &trans   ,     &trans  &trans  &trans
 )
 
 
-ZMK_LAYER(mouse,
-&none  &none           &none           &none           &none                                                                                                             &none                &none                &none                &none      &none
-&none  &none           &none           &none           &none            &kp HOME                                                                          &none          &none                &none                &none                &none      &none
-&none  &none           &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &kp END                                                                           &none          &sk RSHFT            &sk RCTRL            &sk RALT             &sk RGUI   &none
-&none  &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PG_UP                                                                         &msc SCRL_UP   &none                &none                &none                &mkp LCLK  &mkp MB4
-&none  &msc SCRL_DOWN  &none           &none           &none            &kp PG_DN  &mkp MCLK  &kp K_APP  &mkp MB5   &kp LC(X)  &kp LC(C)  &kp LC(LC(V))   &msc SCRL_DOWN &msc SCRL_LEFT       &mmv MOVE_UP         &msc SCRL_RIGHT      &mkp RCLK  &mkp MB5
-&trans &none           &none           &none           &none                       &mkp LCLK  &mkp RCLK  &mkp MB4   &none      &none      &none                          &mmv MOVE_LEFT       &mmv MOVE_DOWN       &mmv MOVE_RIGHT      &mkp MCLK  &trans
+ZMK_BASE_LAYER(mouse,
+&none  &none           &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &kp END      ,    &none          &sk RSHFT       &sk RCTRL     &sk RALT        &sk RGUI   &none,
+&none  &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PG_UP    ,    &msc SCRL_UP   &none           &none         &none           &mkp LCLK  &mkp MB4,
+&none  &msc SCRL_DOWN  &none           &mkp MB4        &mkp MB5         &kp PG_DN    ,    &msc SCRL_DOWN &msc SCRL_LEFT  &mmv MOVE_UP  &msc SCRL_RIGHT &mkp RCLK  &mkp MB5,
+                                                 &mkp LCLK    &mkp MCLK  &mkp RCLK   ,     &trans  &trans  &trans
 )
 
 
