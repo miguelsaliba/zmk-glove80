@@ -2,10 +2,15 @@ manifest:
   remotes:
     - name: moergo-sc
       url-base: https://github.com/moergo-sc
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk
       remote: moergo-sc
-      revision: main
+      revision: v25.11
       import: app/west.yml
+    - name: zmk-helpers
+      remote: urob
+      revision: v0.3
   self:
     path: config
