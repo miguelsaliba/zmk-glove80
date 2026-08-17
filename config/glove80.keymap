@@ -110,8 +110,6 @@
         bt_sel: bt_profile_select {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            wait-ms = <0>;
-            tap-ms = <0>;
             bindings
                 = <&out OUT_BLE>,
                   <&macro_param_1to1>,
@@ -121,8 +119,6 @@
         mod_tab_layer: mod_tab_layer {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            wait-ms = <0>;
-            tap-ms = <0>;
             bindings
                 = <&macro_press &mo NAV>,
                   <&macro_param_1to1>,
@@ -212,7 +208,7 @@ ___ ___ ___ ___ ___ ___ , ___ ___ ___ ___ ___ ___,
 )
 
 ZMK_LAYER(magic,
-&bt BT_CLR   &none           &none           &none           &none                                                                                             &none  &none  &none  &none  &none
+&bt BT_CLR   &none           &none           &none           &none                                                                                             &none  &none  &none  &none  &bt BT_CLR_ALL
 &none        &none           &none           &none           &none           &none                                                                     &none   &none  &none  &none  &none  &none
 &none        &rgb_ug RGB_SPI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                                           &none   &none  &none  &none  &none  &none
 &bootloader  &rgb_ug RGB_SPD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                                           &none   &none  &none  &none  &none  &bootloader
