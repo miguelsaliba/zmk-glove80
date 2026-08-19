@@ -7,4 +7,4 @@
         LM                                                                   RM \
         LB                &none &none &none &none &none &none                RB \
         &magic MAGIC 0 &none &none &none &none LH    RH    &none &none &none &none &magic MAGIC 0 \
-            )
+    )
