@@ -192,6 +192,36 @@
             key-positions = <LH1 LH2>;
             bindings = <&mod_tab_layer LALT>;
         };
+
+        combo_open_paren {
+            key-positions = <LB0 LB1>;
+            bindings = <&kp LPAR>;
+        };
+
+        combo_close_paren {
+            key-positions = <RB0 RB1>;
+            bindings = <&kp RPAR>;
+        };
+
+        combo_open_bracket {
+            key-positions = <LM0 LM1>;
+            bindings = <&kp LBKT>;
+        };
+
+        combo_close_bracket {
+            key-positions = <RM0 RM1>;
+            bindings = <&kp RBKT>;
+        };
+
+        combo_open_brace {
+            key-positions = <LT0 LT1>;
+            bindings = <&kp LBRC>;
+        };
+
+        combo_close_brace {
+            key-positions = <RT0 RT1>;
+            bindings = <&kp RBRC>;
+        };
     };
 };
 
